@@ -1,0 +1,39 @@
+digraph {
+        label = "\ngo语言结构";
+        rankdir = LR;
+        node [shape = record];
+        subgraph cluster_base_name {
+            label = "命名";
+            base_name [label = " 保留字| 变量名 | 函数名 | 包名 "];
+        }
+        subgraph cluster_basic_type {
+            label = "基本类型";
+            basic_type [label = " 整数| 浮点数 | 复数 | 字符串| 常量 "];
+        }
+        subgraph cluster_composite_type {
+            label = "组合类型";
+            composite_type [label = " 数组 | 切片 | 键值对 | 结构体| json | 文本和HTML "];
+        }
+        subgraph cluster_expression {
+            label = "表达式";
+            expression [label = "运算符|优先级|初始化"];
+        }
+        subgraph cluster_control_flow {
+            label = "流程控制";
+            control_flow [label = " for | if | switch | defer"];
+        }
+        subgraph cluster_function {
+            label = "函数";
+            function [label = " 方法 | 接口 | 协程 | 反射"];
+        }
+        subgraph cluster_package {
+            label = "包";
+            package [label = "常用包"];
+        }
+        base_name  -> basic_type [ minlen = 2];
+        basic_type -> composite_type [ minlen = 2];
+        basic_type -> expression [ minlen = 2];
+        expression -> control_flow [ minlen = 2];
+        control_flow -> function [ minlen = 2];
+        function -> package [ minlen = 2];
+    }

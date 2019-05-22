@@ -1,0 +1,10 @@
+digraph write_go_code{
+    write_go_code[label="how to write go code"];
+    go_code_organize[label="go code organize"];
+    remote_package[label="remote package"];
+    write_go_code->{go_code_organize test remote_package};
+    go_code_organize->{workspace  package}
+    workspace->{repository}
+    repository->{packages commands}
+    package->{package_name import_path first_program frist_libray}
+}

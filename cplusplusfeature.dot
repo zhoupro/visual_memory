@@ -1,0 +1,24 @@
+digraph c_plus_plus_feature{
+    c_plus_plus_feature[label="c++特性"];
+    class[label="类"]
+    overload[label="重载"]
+    reference[label="引用"]
+    function[label="函数"]
+    template[label="模板"]
+    exception[label="异常"]
+    c_plus_plus_feature->{class overload reference function template exception}
+    classes[label="类的封装"]
+    inheritance[label="继承"]
+    namespace[label="命名空间"]
+    constructor[label="构造方法"]
+    destructor[label="析构方法"]
+    class->{classes inheritance namespace constructor destructor  }
+    single_inheritance[label="单继承"]
+    multi_inheritance[label="多继承"]
+    inheritance->{single_inheritance multi_inheritance}
+    virtual_function[label="虚函数"]
+    function->{virtual_function }
+    function_overload[label="函数重载"]
+    operator_overload[label="运算重载"]
+    overload->{function_overload operator_overload}
+}

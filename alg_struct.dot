@@ -1,0 +1,63 @@
+digraph alg_struct{
+    struct_alg[label="数据结构和算法"];
+    struct_alg->{alg struct}
+    alg[label="算法"];
+    struct[label="数据结构"];
+    base_alg_thoughs[label="基本算法思想"]
+    alg->{base_alg_thoughs }
+    divide[label="分治法"]
+    dp[label="动态规划"]
+    greedy[label="贪心"]
+    reback[label="回溯"]
+    branch[label="分支界限"]
+    base_alg_thoughs->{divide dp greedy reback branch}
+    order[label="排序"]
+    alg->{order}
+    insert_order[label="插入排序"]
+    select_order[label="选择排序"]
+    swap_order[label="交换排序"]
+    merge_order[label="归并排序"]
+    cout_order[label="计数排序"]
+    radix_order[label="基数排序"]
+    bucket_order[label="桶排序"]
+    bitree_order[label="二叉树排序"]
+    order->{insert_order select_order swap_order merge_order cout_order radix_order bucket_order bitree_order}
+    direct_insert_order[label="简单插入排序"]
+    shell_order[label="希尔排序"]
+    insert_order->{direct_insert_order shell_order}
+    simple_select_order[label="简单选择排序"]
+    heap_order[label="堆排序"]
+    select_order->{simple_select_order heap_order}
+    bubble_order[label="冒泡排序"]
+    quick_order[label="快速排序"]
+    swap_order->{bubble_order quick_order}
+    alg->{search}
+    search[label="查找"]
+    alg->{traversal}
+    traversal[label="遍历"]
+    traversal_depth[label="深度遍历"]
+    traversal_level[label="广度遍历"]
+    traversal->{traversal_depth traversal_level}
+    time_cose[label="时间复杂度"]
+    alg->{time_cose}
+    set[label="集合"]
+    line_struct[label="线性结构"]
+    tree[label="树"]
+    map[label="图"]
+    struct->{ set line_struct tree map }
+    line_struct[label="线性表"]
+    line_table[label="线性表"]
+    array[label="数组"]
+    linklist[label="链表"]
+    line_table->{array linklist}
+    string[label="字符串"]
+    stack[label="栈"]
+    queue[label="队列"]
+    hash_table[label="哈希表"]
+    bitmap[label="位图"]
+    line_struct->{ line_table string stack  queue hash_table bitmap }
+    bitree[label="二叉树"]
+    balance_bitree[label="平衡二叉树"]
+    heap[label="堆"]
+    tree->{bitree balance_bitree heap}
+}
